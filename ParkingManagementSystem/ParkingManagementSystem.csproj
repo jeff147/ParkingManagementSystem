@@ -62,16 +62,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="editPermit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="editPermit.Designer.cs">
+      <DependentUpon>editPermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPermits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPermits.Designer.cs">
+      <DependentUpon>formPermits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="issuePermit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="issuePermit.Designer.cs">
+      <DependentUpon>issuePermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkingDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParkingDatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="voidPermit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="voidPermit.Designer.cs">
+      <DependentUpon>voidPermit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="editPermit.resx">
+      <DependentUpon>editPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPermits.resx">
+      <DependentUpon>formPermits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="issuePermit.resx">
+      <DependentUpon>issuePermit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,6 +120,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="voidPermit.resx">
+      <DependentUpon>voidPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ParkingDatabaseDataSet.xsc">
+      <DependentUpon>ParkingDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ParkingDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ParkingDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ParkingDatabaseDataSet.xss">
+      <DependentUpon>ParkingDatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,7 +145,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ParkingDatabase.mdf">
