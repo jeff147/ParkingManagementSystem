@@ -62,11 +62,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="editCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editCustomer.Designer.cs">
+      <DependentUpon>editCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="editPermit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="editPermit.Designer.cs">
       <DependentUpon>editPermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editTicket.Designer.cs">
+      <DependentUpon>editTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editVehicle.Designer.cs">
+      <DependentUpon>editVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCustomer.Designer.cs">
+      <DependentUpon>formCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="formMain.cs">
       <SubType>Form</SubType>
@@ -80,11 +104,35 @@
     <Compile Include="formPermits.Designer.cs">
       <DependentUpon>formPermits.cs</DependentUpon>
     </Compile>
+    <Compile Include="formTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTickets.Designer.cs">
+      <DependentUpon>formTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formVehicles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formVehicles.Designer.cs">
+      <DependentUpon>formVehicles.cs</DependentUpon>
+    </Compile>
     <Compile Include="issuePermit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="issuePermit.Designer.cs">
       <DependentUpon>issuePermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newCustomer.Designer.cs">
+      <DependentUpon>newCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newTicket.Designer.cs">
+      <DependentUpon>newTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="ParkingDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -93,14 +141,38 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="newVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newVehicle.Designer.cs">
+      <DependentUpon>newVehicle.cs</DependentUpon>
+    </Compile>
     <Compile Include="voidPermit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="voidPermit.Designer.cs">
       <DependentUpon>voidPermit.cs</DependentUpon>
     </Compile>
+    <Compile Include="voidTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="voidTicket.Designer.cs">
+      <DependentUpon>voidTicket.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="editCustomer.resx">
+      <DependentUpon>editCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="editPermit.resx">
       <DependentUpon>editPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editTicket.resx">
+      <DependentUpon>editTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editVehicle.resx">
+      <DependentUpon>editVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCustomer.resx">
+      <DependentUpon>formCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
@@ -108,8 +180,20 @@
     <EmbeddedResource Include="formPermits.resx">
       <DependentUpon>formPermits.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formTickets.resx">
+      <DependentUpon>formTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formVehicles.resx">
+      <DependentUpon>formVehicles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="issuePermit.resx">
       <DependentUpon>issuePermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newCustomer.resx">
+      <DependentUpon>newCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newTicket.resx">
+      <DependentUpon>newTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,8 +204,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="newVehicle.resx">
+      <DependentUpon>newVehicle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="voidPermit.resx">
       <DependentUpon>voidPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="voidTicket.resx">
+      <DependentUpon>voidTicket.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ParkingDatabaseDataSet.xsc">
       <DependentUpon>ParkingDatabaseDataSet.xsd</DependentUpon>

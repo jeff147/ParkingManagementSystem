@@ -50,6 +50,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.btnIssuePermit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -250,11 +251,22 @@
             this.label24.TabIndex = 23;
             this.label24.Text = "End Date:";
             // 
+            // btnIssuePermit
+            // 
+            this.btnIssuePermit.Location = new System.Drawing.Point(587, 588);
+            this.btnIssuePermit.Name = "btnIssuePermit";
+            this.btnIssuePermit.Size = new System.Drawing.Size(75, 23);
+            this.btnIssuePermit.TabIndex = 25;
+            this.btnIssuePermit.Text = "Done";
+            this.btnIssuePermit.UseVisualStyleBackColor = true;
+            this.btnIssuePermit.Click += new System.EventHandler(this.btnIssuePermit_Click);
+            // 
             // issuePermit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 623);
+            this.Controls.Add(this.btnIssuePermit);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label21);
@@ -308,5 +320,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button btnIssuePermit;
     }
 }

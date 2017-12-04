@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ParkingManagementSystem
 {
-    public partial class voidPermit : Form
+    public partial class btnVoidPermit : Form
     {
-        public voidPermit()
+        public btnVoidPermit()
         {
             InitializeComponent();
+        }
+
+        private void voidPermitBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

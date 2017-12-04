@@ -16,5 +16,10 @@ namespace ParkingManagementSystem
         {
             InitializeComponent();
         }
+
+        private void btnEditPermit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

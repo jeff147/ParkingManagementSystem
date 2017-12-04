@@ -35,6 +35,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnEditPermit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -100,11 +101,22 @@
             this.label4.TabIndex = 30;
             this.label4.Text = "License Plate:";
             // 
+            // btnEditPermit
+            // 
+            this.btnEditPermit.Location = new System.Drawing.Point(526, 579);
+            this.btnEditPermit.Name = "btnEditPermit";
+            this.btnEditPermit.Size = new System.Drawing.Size(75, 23);
+            this.btnEditPermit.TabIndex = 31;
+            this.btnEditPermit.Text = "Done";
+            this.btnEditPermit.UseVisualStyleBackColor = true;
+            this.btnEditPermit.Click += new System.EventHandler(this.btnEditPermit_Click);
+            // 
             // editPermit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 586);
+            this.ClientSize = new System.Drawing.Size(613, 614);
+            this.Controls.Add(this.btnEditPermit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label24);
@@ -128,5 +140,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnEditPermit;
     }
 }

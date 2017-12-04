@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ParkingManagementSystem
 {
-    public partial class issuePermit : Form
+    public partial class editCustomer : Form
     {
-        public issuePermit()
+        public editCustomer()
         {
             InitializeComponent();
         }
 
-        private void btnIssuePermit_Click(object sender, EventArgs e)
+        private void btnEditCustomer_Click(object sender, EventArgs e)
         {
             this.Hide();
         }

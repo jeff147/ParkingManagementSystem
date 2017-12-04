@@ -7,39 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
-using System.Data.SqlClient;
 
 namespace ParkingManagementSystem
 {
-    public partial class formPermits : Form
+    public partial class formTickets : Form
     {
-        public formPermits()
+        public formTickets()
         {
             InitializeComponent();
-        }
-
-        private void formPermits_Load(object sender, EventArgs e)
-        {
-            //things
-        }
-
-        private void btnIssue_Click(object sender, EventArgs e)
-        {
-            issuePermit issue = new issuePermit();
-            issue.Show();
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            editPermit edit = new editPermit();
-            edit.Show();
-        }
-
-        private void btnVoid_Click(object sender, EventArgs e)
-        {
-            btnVoidPermit voidp = new btnVoidPermit();
-            voidp.Show();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -47,6 +22,29 @@ namespace ParkingManagementSystem
             formMain main = new formMain();
             main.Show();
             this.Hide();
+        }
+
+        private void btnIssue_Click(object sender, EventArgs e)
+        {
+            newTicket tick = new newTicket();
+            tick.Show();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            editTicket edit = new editTicket();
+            edit.Show();
+        }
+
+        private void btnVoid_Click(object sender, EventArgs e)
+        {
+            voidTicket voidt = new voidTicket();
+            voidt.Show();
+        }
+
+        private void formTickets_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -32,6 +32,7 @@
             this.btnVehicles = new System.Windows.Forms.Button();
             this.btnTickets = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnPermits
@@ -52,6 +53,7 @@
             this.btnVehicles.TabIndex = 1;
             this.btnVehicles.Text = "Vehicles";
             this.btnVehicles.UseVisualStyleBackColor = true;
+            this.btnVehicles.Click += new System.EventHandler(this.btnVehicles_Click);
             // 
             // btnTickets
             // 
@@ -61,6 +63,7 @@
             this.btnTickets.TabIndex = 2;
             this.btnTickets.Text = "Tickets";
             this.btnTickets.UseVisualStyleBackColor = true;
+            this.btnTickets.Click += new System.EventHandler(this.btnTickets_Click);
             // 
             // btnCustomers
             // 
@@ -70,12 +73,23 @@
             this.btnCustomers.TabIndex = 3;
             this.btnCustomers.Text = "Customers";
             this.btnCustomers.UseVisualStyleBackColor = true;
+            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(24, 252);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(1026, 108);
+            this.listBox1.TabIndex = 4;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1108, 589);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnCustomers);
             this.Controls.Add(this.btnTickets);
             this.Controls.Add(this.btnVehicles);
@@ -93,6 +107,7 @@
         private System.Windows.Forms.Button btnVehicles;
         private System.Windows.Forms.Button btnTickets;
         private System.Windows.Forms.Button btnCustomers;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
