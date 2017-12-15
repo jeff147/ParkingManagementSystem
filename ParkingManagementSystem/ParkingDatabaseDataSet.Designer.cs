@@ -28,7 +28,7 @@ namespace ParkingManagementSystem {
         
         private PermitsDataTable tablePermits;
         
-        private TableDataTable tableTable;
+        private TicketsDataTable tableTickets;
         
         private VehiclesDataTable tableVehicles;
         
@@ -72,8 +72,8 @@ namespace ParkingManagementSystem {
                 if ((ds.Tables["Permits"] != null)) {
                     base.Tables.Add(new PermitsDataTable(ds.Tables["Permits"]));
                 }
-                if ((ds.Tables["Table"] != null)) {
-                    base.Tables.Add(new TableDataTable(ds.Tables["Table"]));
+                if ((ds.Tables["Tickets"] != null)) {
+                    base.Tables.Add(new TicketsDataTable(ds.Tables["Tickets"]));
                 }
                 if ((ds.Tables["Vehicles"] != null)) {
                     base.Tables.Add(new VehiclesDataTable(ds.Tables["Vehicles"]));
@@ -120,9 +120,9 @@ namespace ParkingManagementSystem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TableDataTable Table {
+        public TicketsDataTable Tickets {
             get {
-                return this.tableTable;
+                return this.tableTickets;
             }
         }
         
@@ -209,8 +209,8 @@ namespace ParkingManagementSystem {
                 if ((ds.Tables["Permits"] != null)) {
                     base.Tables.Add(new PermitsDataTable(ds.Tables["Permits"]));
                 }
-                if ((ds.Tables["Table"] != null)) {
-                    base.Tables.Add(new TableDataTable(ds.Tables["Table"]));
+                if ((ds.Tables["Tickets"] != null)) {
+                    base.Tables.Add(new TicketsDataTable(ds.Tables["Tickets"]));
                 }
                 if ((ds.Tables["Vehicles"] != null)) {
                     base.Tables.Add(new VehiclesDataTable(ds.Tables["Vehicles"]));
@@ -260,10 +260,10 @@ namespace ParkingManagementSystem {
                     this.tablePermits.InitVars();
                 }
             }
-            this.tableTable = ((TableDataTable)(base.Tables["Table"]));
+            this.tableTickets = ((TicketsDataTable)(base.Tables["Tickets"]));
             if ((initTable == true)) {
-                if ((this.tableTable != null)) {
-                    this.tableTable.InitVars();
+                if ((this.tableTickets != null)) {
+                    this.tableTickets.InitVars();
                 }
             }
             this.tableVehicles = ((VehiclesDataTable)(base.Tables["Vehicles"]));
@@ -289,8 +289,8 @@ namespace ParkingManagementSystem {
             base.Tables.Add(this.tableCustomers);
             this.tablePermits = new PermitsDataTable();
             base.Tables.Add(this.tablePermits);
-            this.tableTable = new TableDataTable();
-            base.Tables.Add(this.tableTable);
+            this.tableTickets = new TicketsDataTable();
+            base.Tables.Add(this.tableTickets);
             this.tableVehicles = new VehiclesDataTable();
             base.Tables.Add(this.tableVehicles);
             this.relationvehicleId_FK = new global::System.Data.DataRelation("vehicleId_FK", new global::System.Data.DataColumn[] {
@@ -303,7 +303,7 @@ namespace ParkingManagementSystem {
             this.Relations.Add(this.relationvehicle_FK);
             this.relationvehicleIdFK = new global::System.Data.DataRelation("vehicleIdFK", new global::System.Data.DataColumn[] {
                         this.tableVehicles.vehicleIdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableTable.vehicleId_FKColumn}, false);
+                        this.tableTickets.vehicleId_FKColumn}, false);
             this.Relations.Add(this.relationvehicleIdFK);
         }
         
@@ -321,7 +321,7 @@ namespace ParkingManagementSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTable() {
+        private bool ShouldSerializeTickets() {
             return false;
         }
         
@@ -393,7 +393,7 @@ namespace ParkingManagementSystem {
         public delegate void PermitsRowChangeEventHandler(object sender, PermitsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void TableRowChangeEventHandler(object sender, TableRowChangeEvent e);
+        public delegate void TicketsRowChangeEventHandler(object sender, TicketsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void VehiclesRowChangeEventHandler(object sender, VehiclesRowChangeEvent e);
@@ -1122,7 +1122,7 @@ namespace ParkingManagementSystem {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TableDataTable : global::System.Data.TypedTableBase<TableRow> {
+        public partial class TicketsDataTable : global::System.Data.TypedTableBase<TicketsRow> {
             
             private global::System.Data.DataColumn columnticketId;
             
@@ -1144,8 +1144,8 @@ namespace ParkingManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableDataTable() {
-                this.TableName = "Table";
+            public TicketsDataTable() {
+                this.TableName = "Tickets";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1153,7 +1153,7 @@ namespace ParkingManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TableDataTable(global::System.Data.DataTable table) {
+            internal TicketsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1170,7 +1170,7 @@ namespace ParkingManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected TableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TicketsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1258,34 +1258,34 @@ namespace ParkingManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRow this[int index] {
+            public TicketsRow this[int index] {
                 get {
-                    return ((TableRow)(this.Rows[index]));
+                    return ((TicketsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TableRowChangeEventHandler TableRowChanging;
+            public event TicketsRowChangeEventHandler TicketsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TableRowChangeEventHandler TableRowChanged;
+            public event TicketsRowChangeEventHandler TicketsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TableRowChangeEventHandler TableRowDeleting;
+            public event TicketsRowChangeEventHandler TicketsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TableRowChangeEventHandler TableRowDeleted;
+            public event TicketsRowChangeEventHandler TicketsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddTableRow(TableRow row) {
+            public void AddTicketsRow(TicketsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRow AddTableRow(string dateTime, string ticketType, string lot, string reason, string carLicensePlate, string carState, string notes, VehiclesRow parentVehiclesRowByvehicleIdFK) {
-                TableRow rowTableRow = ((TableRow)(this.NewRow()));
+            public TicketsRow AddTicketsRow(string dateTime, string ticketType, string lot, string reason, string carLicensePlate, string carState, string notes, VehiclesRow parentVehiclesRowByvehicleIdFK) {
+                TicketsRow rowTicketsRow = ((TicketsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         dateTime,
@@ -1299,22 +1299,22 @@ namespace ParkingManagementSystem {
                 if ((parentVehiclesRowByvehicleIdFK != null)) {
                     columnValuesArray[8] = parentVehiclesRowByvehicleIdFK[0];
                 }
-                rowTableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTableRow);
-                return rowTableRow;
+                rowTicketsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTicketsRow);
+                return rowTicketsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRow FindByticketId(int ticketId) {
-                return ((TableRow)(this.Rows.Find(new object[] {
+            public TicketsRow FindByticketId(int ticketId) {
+                return ((TicketsRow)(this.Rows.Find(new object[] {
                             ticketId})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TableDataTable cln = ((TableDataTable)(base.Clone()));
+                TicketsDataTable cln = ((TicketsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1322,7 +1322,7 @@ namespace ParkingManagementSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TableDataTable();
+                return new TicketsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1379,39 +1379,32 @@ namespace ParkingManagementSystem {
                 this.columncarLicensePlate.MaxLength = 50;
                 this.columncarState.MaxLength = 50;
                 this.columnnotes.MaxLength = 2147483647;
-                this.ExtendedProperties.Add("Generator_RowClassName", "TableRow");
-                this.ExtendedProperties.Add("Generator_RowEvArgName", "TableRowChangeEvent");
-                this.ExtendedProperties.Add("Generator_RowEvHandlerName", "TableRowChangeEventHandler");
-                this.ExtendedProperties.Add("Generator_TableClassName", "TableDataTable");
-                this.ExtendedProperties.Add("Generator_TablePropName", "Table");
-                this.ExtendedProperties.Add("Generator_TableVarName", "tableTable");
-                this.ExtendedProperties.Add("Generator_UserTableName", "Table");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRow NewTableRow() {
-                return ((TableRow)(this.NewRow()));
+            public TicketsRow NewTicketsRow() {
+                return ((TicketsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TableRow(builder);
+                return new TicketsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TableRow);
+                return typeof(TicketsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TableRowChanged != null)) {
-                    this.TableRowChanged(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.TicketsRowChanged != null)) {
+                    this.TicketsRowChanged(this, new TicketsRowChangeEvent(((TicketsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1419,8 +1412,8 @@ namespace ParkingManagementSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TableRowChanging != null)) {
-                    this.TableRowChanging(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.TicketsRowChanging != null)) {
+                    this.TicketsRowChanging(this, new TicketsRowChangeEvent(((TicketsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1428,8 +1421,8 @@ namespace ParkingManagementSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TableRowDeleted != null)) {
-                    this.TableRowDeleted(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.TicketsRowDeleted != null)) {
+                    this.TicketsRowDeleted(this, new TicketsRowChangeEvent(((TicketsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1437,14 +1430,14 @@ namespace ParkingManagementSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TableRowDeleting != null)) {
-                    this.TableRowDeleting(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.TicketsRowDeleting != null)) {
+                    this.TicketsRowDeleting(this, new TicketsRowChangeEvent(((TicketsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveTableRow(TableRow row) {
+            public void RemoveTicketsRow(TicketsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1471,7 +1464,7 @@ namespace ParkingManagementSystem {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TableDataTable";
+                attribute2.FixedValue = "TicketsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2110,25 +2103,25 @@ namespace ParkingManagementSystem {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TableRow : global::System.Data.DataRow {
+        public partial class TicketsRow : global::System.Data.DataRow {
             
-            private TableDataTable tableTable;
+            private TicketsDataTable tableTickets;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TableRow(global::System.Data.DataRowBuilder rb) : 
+            internal TicketsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTable = ((TableDataTable)(this.Table));
+                this.tableTickets = ((TicketsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ticketId {
                 get {
-                    return ((int)(this[this.tableTable.ticketIdColumn]));
+                    return ((int)(this[this.tableTickets.ticketIdColumn]));
                 }
                 set {
-                    this[this.tableTable.ticketIdColumn] = value;
+                    this[this.tableTickets.ticketIdColumn] = value;
                 }
             }
             
@@ -2136,10 +2129,10 @@ namespace ParkingManagementSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string dateTime {
                 get {
-                    return ((string)(this[this.tableTable.dateTimeColumn]));
+                    return ((string)(this[this.tableTickets.dateTimeColumn]));
                 }
                 set {
-                    this[this.tableTable.dateTimeColumn] = value;
+                    this[this.tableTickets.dateTimeColumn] = value;
                 }
             }
             
@@ -2147,10 +2140,10 @@ namespace ParkingManagementSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string ticketType {
                 get {
-                    return ((string)(this[this.tableTable.ticketTypeColumn]));
+                    return ((string)(this[this.tableTickets.ticketTypeColumn]));
                 }
                 set {
-                    this[this.tableTable.ticketTypeColumn] = value;
+                    this[this.tableTickets.ticketTypeColumn] = value;
                 }
             }
             
@@ -2158,10 +2151,10 @@ namespace ParkingManagementSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string lot {
                 get {
-                    return ((string)(this[this.tableTable.lotColumn]));
+                    return ((string)(this[this.tableTickets.lotColumn]));
                 }
                 set {
-                    this[this.tableTable.lotColumn] = value;
+                    this[this.tableTickets.lotColumn] = value;
                 }
             }
             
@@ -2169,10 +2162,10 @@ namespace ParkingManagementSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string reason {
                 get {
-                    return ((string)(this[this.tableTable.reasonColumn]));
+                    return ((string)(this[this.tableTickets.reasonColumn]));
                 }
                 set {
-                    this[this.tableTable.reasonColumn] = value;
+                    this[this.tableTickets.reasonColumn] = value;
                 }
             }
             
@@ -2181,14 +2174,14 @@ namespace ParkingManagementSystem {
             public string carLicensePlate {
                 get {
                     try {
-                        return ((string)(this[this.tableTable.carLicensePlateColumn]));
+                        return ((string)(this[this.tableTickets.carLicensePlateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'carLicensePlate\' in table \'Table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'carLicensePlate\' in table \'Tickets\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTable.carLicensePlateColumn] = value;
+                    this[this.tableTickets.carLicensePlateColumn] = value;
                 }
             }
             
@@ -2197,14 +2190,14 @@ namespace ParkingManagementSystem {
             public string carState {
                 get {
                     try {
-                        return ((string)(this[this.tableTable.carStateColumn]));
+                        return ((string)(this[this.tableTickets.carStateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'carState\' in table \'Table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'carState\' in table \'Tickets\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTable.carStateColumn] = value;
+                    this[this.tableTickets.carStateColumn] = value;
                 }
             }
             
@@ -2213,14 +2206,14 @@ namespace ParkingManagementSystem {
             public string notes {
                 get {
                     try {
-                        return ((string)(this[this.tableTable.notesColumn]));
+                        return ((string)(this[this.tableTickets.notesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'notes\' in table \'Table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'notes\' in table \'Tickets\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTable.notesColumn] = value;
+                    this[this.tableTickets.notesColumn] = value;
                 }
             }
             
@@ -2229,14 +2222,14 @@ namespace ParkingManagementSystem {
             public int vehicleId_FK {
                 get {
                     try {
-                        return ((int)(this[this.tableTable.vehicleId_FKColumn]));
+                        return ((int)(this[this.tableTickets.vehicleId_FKColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'vehicleId_FK\' in table \'Table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'vehicleId_FK\' in table \'Tickets\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTable.vehicleId_FKColumn] = value;
+                    this[this.tableTickets.vehicleId_FKColumn] = value;
                 }
             }
             
@@ -2254,49 +2247,49 @@ namespace ParkingManagementSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IscarLicensePlateNull() {
-                return this.IsNull(this.tableTable.carLicensePlateColumn);
+                return this.IsNull(this.tableTickets.carLicensePlateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetcarLicensePlateNull() {
-                this[this.tableTable.carLicensePlateColumn] = global::System.Convert.DBNull;
+                this[this.tableTickets.carLicensePlateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IscarStateNull() {
-                return this.IsNull(this.tableTable.carStateColumn);
+                return this.IsNull(this.tableTickets.carStateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetcarStateNull() {
-                this[this.tableTable.carStateColumn] = global::System.Convert.DBNull;
+                this[this.tableTickets.carStateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsnotesNull() {
-                return this.IsNull(this.tableTable.notesColumn);
+                return this.IsNull(this.tableTickets.notesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetnotesNull() {
-                this[this.tableTable.notesColumn] = global::System.Convert.DBNull;
+                this[this.tableTickets.notesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsvehicleId_FKNull() {
-                return this.IsNull(this.tableTable.vehicleId_FKColumn);
+                return this.IsNull(this.tableTickets.vehicleId_FKColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetvehicleId_FKNull() {
-                this[this.tableTable.vehicleId_FKColumn] = global::System.Convert.DBNull;
+                this[this.tableTickets.vehicleId_FKColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2443,12 +2436,12 @@ namespace ParkingManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRow[] GetTableRows() {
+            public TicketsRow[] GetTableRows() {
                 if ((this.Table.ChildRelations["vehicleIdFK"] == null)) {
-                    return new TableRow[0];
+                    return new TicketsRow[0];
                 }
                 else {
-                    return ((TableRow[])(base.GetChildRows(this.Table.ChildRelations["vehicleIdFK"])));
+                    return ((TicketsRow[])(base.GetChildRows(this.Table.ChildRelations["vehicleIdFK"])));
                 }
             }
         }
@@ -2525,22 +2518,22 @@ namespace ParkingManagementSystem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class TableRowChangeEvent : global::System.EventArgs {
+        public class TicketsRowChangeEvent : global::System.EventArgs {
             
-            private TableRow eventRow;
+            private TicketsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRowChangeEvent(TableRow row, global::System.Data.DataRowAction action) {
+            public TicketsRowChangeEvent(TicketsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRow Row {
+            public TicketsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3500,7 +3493,7 @@ SELECT permitId, lot, status, startDate, endDate, vehicleId_FK FROM Permits WHER
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class TableTableAdapter : global::System.ComponentModel.Component {
+    public partial class TicketsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3514,7 +3507,7 @@ SELECT permitId, lot, status, startDate, endDate, vehicleId_FK FROM Permits WHER
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public TableTableAdapter() {
+        public TicketsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3611,7 +3604,7 @@ SELECT permitId, lot, status, startDate, endDate, vehicleId_FK FROM Permits WHER
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Table";
+            tableMapping.DataSetTable = "Tickets";
             tableMapping.ColumnMappings.Add("ticketId", "ticketId");
             tableMapping.ColumnMappings.Add("dateTime", "dateTime");
             tableMapping.ColumnMappings.Add("ticketType", "ticketType");
@@ -3699,7 +3692,7 @@ SELECT ticketId, dateTime, ticketType, lot, reason, carLicensePlate, carState, n
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ParkingDatabaseDataSet.TableDataTable dataTable) {
+        public virtual int Fill(ParkingDatabaseDataSet.TicketsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3712,9 +3705,9 @@ SELECT ticketId, dateTime, ticketType, lot, reason, carLicensePlate, carState, n
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ParkingDatabaseDataSet.TableDataTable GetData() {
+        public virtual ParkingDatabaseDataSet.TicketsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ParkingDatabaseDataSet.TableDataTable dataTable = new ParkingDatabaseDataSet.TableDataTable();
+            ParkingDatabaseDataSet.TicketsDataTable dataTable = new ParkingDatabaseDataSet.TicketsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3722,7 +3715,7 @@ SELECT ticketId, dateTime, ticketType, lot, reason, carLicensePlate, carState, n
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ParkingDatabaseDataSet.TableDataTable dataTable) {
+        public virtual int Update(ParkingDatabaseDataSet.TicketsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -3730,7 +3723,7 @@ SELECT ticketId, dateTime, ticketType, lot, reason, carLicensePlate, carState, n
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(ParkingDatabaseDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Table");
+            return this.Adapter.Update(dataSet, "Tickets");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4557,7 +4550,7 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
         
         private PermitsTableAdapter _permitsTableAdapter;
         
-        private TableTableAdapter _tableTableAdapter;
+        private TicketsTableAdapter _ticketsTableAdapter;
         
         private VehiclesTableAdapter _vehiclesTableAdapter;
         
@@ -4609,12 +4602,12 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public TableTableAdapter TableTableAdapter {
+        public TicketsTableAdapter TicketsTableAdapter {
             get {
-                return this._tableTableAdapter;
+                return this._ticketsTableAdapter;
             }
             set {
-                this._tableTableAdapter = value;
+                this._ticketsTableAdapter = value;
             }
         }
         
@@ -4659,9 +4652,9 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
                             && (this._permitsTableAdapter.Connection != null))) {
                     return this._permitsTableAdapter.Connection;
                 }
-                if (((this._tableTableAdapter != null) 
-                            && (this._tableTableAdapter.Connection != null))) {
-                    return this._tableTableAdapter.Connection;
+                if (((this._ticketsTableAdapter != null) 
+                            && (this._ticketsTableAdapter.Connection != null))) {
+                    return this._ticketsTableAdapter.Connection;
                 }
                 if (((this._vehiclesTableAdapter != null) 
                             && (this._vehiclesTableAdapter.Connection != null))) {
@@ -4686,7 +4679,7 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
                 if ((this._permitsTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tableTableAdapter != null)) {
+                if ((this._ticketsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._vehiclesTableAdapter != null)) {
@@ -4730,12 +4723,12 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tableTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Table.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._ticketsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tickets.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tableTableAdapter.Update(updatedRows));
+                    result = (result + this._ticketsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4773,11 +4766,11 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tableTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Table.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._ticketsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tickets.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tableTableAdapter.Update(addedRows));
+                    result = (result + this._ticketsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -4791,11 +4784,11 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(ParkingDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tableTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Table.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._ticketsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tickets.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tableTableAdapter.Update(deletedRows));
+                    result = (result + this._ticketsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -4872,8 +4865,8 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tableTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tableTableAdapter.Connection) == false))) {
+            if (((this._ticketsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._ticketsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -4932,13 +4925,13 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
                         adaptersWithAcceptChangesDuringUpdate.Add(this._permitsTableAdapter.Adapter);
                     }
                 }
-                if ((this._tableTableAdapter != null)) {
-                    revertConnections.Add(this._tableTableAdapter, this._tableTableAdapter.Connection);
-                    this._tableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tableTableAdapter.Adapter);
+                if ((this._ticketsTableAdapter != null)) {
+                    revertConnections.Add(this._ticketsTableAdapter, this._ticketsTableAdapter.Connection);
+                    this._ticketsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._ticketsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._ticketsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._ticketsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._ticketsTableAdapter.Adapter);
                     }
                 }
                 if ((this._vehiclesTableAdapter != null)) {
@@ -5016,9 +5009,9 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
                     this._permitsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._permitsTableAdapter]));
                     this._permitsTableAdapter.Transaction = null;
                 }
-                if ((this._tableTableAdapter != null)) {
-                    this._tableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tableTableAdapter]));
-                    this._tableTableAdapter.Transaction = null;
+                if ((this._ticketsTableAdapter != null)) {
+                    this._ticketsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._ticketsTableAdapter]));
+                    this._ticketsTableAdapter.Transaction = null;
                 }
                 if ((this._vehiclesTableAdapter != null)) {
                     this._vehiclesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._vehiclesTableAdapter]));

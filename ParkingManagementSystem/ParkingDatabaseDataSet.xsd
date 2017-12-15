@@ -151,7 +151,7 @@ SELECT permitId, lot, status, startDate, endDate, vehicleId_FK FROM Permits WHER
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TableTableAdapter" GeneratorDataComponentClassName="TableTableAdapter" Name="Table" UserDataComponentName="TableTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TicketsTableAdapter" GeneratorDataComponentClassName="TicketsTableAdapter" Name="Tickets" UserDataComponentName="TicketsTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ParkingDatabaseConnectionString (Settings)" DbObjectName="dbo.[Table]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -410,7 +410,7 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Table" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_TablePropName="Table" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_UserTableName="Table" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowClassName="TableRow">
+        <xs:element name="Tickets" msprop:Generator_TableClassName="TicketsDataTable" msprop:Generator_TableVarName="tableTickets" msprop:Generator_TablePropName="Tickets" msprop:Generator_RowDeletingName="TicketsRowDeleting" msprop:Generator_RowChangingName="TicketsRowChanging" msprop:Generator_RowEvHandlerName="TicketsRowChangeEventHandler" msprop:Generator_RowDeletedName="TicketsRowDeleted" msprop:Generator_UserTableName="Tickets" msprop:Generator_RowChangedName="TicketsRowChanged" msprop:Generator_RowEvArgName="TicketsRowChangeEvent" msprop:Generator_RowClassName="TicketsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ticketId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnticketId" msprop:Generator_ColumnPropNameInRow="ticketId" msprop:Generator_ColumnPropNameInTable="ticketIdColumn" msprop:Generator_UserColumnName="ticketId" type="xs:int" />
@@ -527,8 +527,8 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
       <xs:selector xpath=".//mstns:Permits" />
       <xs:field xpath="mstns:permitId" />
     </xs:unique>
-    <xs:unique name="Table_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Table" />
+    <xs:unique name="Tickets_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Tickets" />
       <xs:field xpath="mstns:ticketId" />
     </xs:unique>
     <xs:unique name="Vehicles_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
@@ -540,7 +540,7 @@ SELECT vehicleId, licensePlate, state, make, model, year, color, VIN FROM Vehicl
     <xs:appinfo>
       <msdata:Relationship name="vehicleId_FK" msdata:parent="Vehicles" msdata:child="Customers" msdata:parentkey="vehicleId" msdata:childkey="vehicleId" msprop:Generator_UserChildTable="Customers" msprop:Generator_ChildPropName="GetCustomersRows" msprop:Generator_UserRelationName="vehicleId_FK" msprop:Generator_RelationVarName="relationvehicleId_FK" msprop:Generator_UserParentTable="Vehicles" msprop:Generator_ParentPropName="VehiclesRow" />
       <msdata:Relationship name="vehicle_FK" msdata:parent="Vehicles" msdata:child="Permits" msdata:parentkey="vehicleId" msdata:childkey="vehicleId_FK" msprop:Generator_UserChildTable="Permits" msprop:Generator_ChildPropName="GetPermitsRows" msprop:Generator_UserRelationName="vehicle_FK" msprop:Generator_RelationVarName="relationvehicle_FK" msprop:Generator_UserParentTable="Vehicles" msprop:Generator_ParentPropName="VehiclesRow" />
-      <msdata:Relationship name="vehicleIdFK" msdata:parent="Vehicles" msdata:child="Table" msdata:parentkey="vehicleId" msdata:childkey="vehicleId_FK" msprop:Generator_UserChildTable="Table" msprop:Generator_ChildPropName="GetTableRows" msprop:Generator_UserRelationName="vehicleIdFK" msprop:Generator_RelationVarName="relationvehicleIdFK" msprop:Generator_UserParentTable="Vehicles" msprop:Generator_ParentPropName="VehiclesRow" />
+      <msdata:Relationship name="vehicleIdFK" msdata:parent="Vehicles" msdata:child="Tickets" msdata:parentkey="vehicleId" msdata:childkey="vehicleId_FK" msprop:Generator_UserChildTable="Tickets" msprop:Generator_ChildPropName="GetTableRows" msprop:Generator_UserRelationName="vehicleIdFK" msprop:Generator_RelationVarName="relationvehicleIdFK" msprop:Generator_UserParentTable="Vehicles" msprop:Generator_ParentPropName="VehiclesRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

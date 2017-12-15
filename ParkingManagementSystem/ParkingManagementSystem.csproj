@@ -134,6 +134,9 @@
     <Compile Include="newTicket.Designer.cs">
       <DependentUpon>newTicket.cs</DependentUpon>
     </Compile>
+    <Compile Include="ParkingDatabaseDataSet.cs">
+      <DependentUpon>ParkingDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ParkingDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
